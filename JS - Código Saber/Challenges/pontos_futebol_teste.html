@@ -1,0 +1,47 @@
+<script>
+
+let pulaLinha = function(){
+    document.write("<br>");
+}
+
+let mostra = function(frase){
+    document.write(frase);
+    pulaLinha();
+}
+
+let calculaPontos = function(vitorias, empates, derrotas){
+    return (vitorias * 3) + empates + (derrotas * -1);
+}
+
+let calculaPontosAdversario = function(vitoriasAdversario, empatesAdversario){
+    return (vitoriasAdversario * 3) + empatesAdversario + (derrotasAdversario * -1);
+}
+
+let vitorias = prompt("Quantos jogos o CDC Futebol Clube venceu?");
+let empates = prompt("Quantos jogos o CDC Futebol Clube empatou?");
+let derrotas = prompt("Quantos jogos o CDC Futebol Clube perdeu?");
+let vitoriasAdversario = prompt("Quantos jogos o Livro Velho venceu?");
+let empatesAdversario = prompt("Quantos jogos o Livro Velho empatou?");
+let derrotasAdversario = prompt("Quantos jogos o Livro Velho perdeu?");
+
+//let pontos = (vitorias * 3) + parseInt(empates); ANTES DA FUNCTION CALCULAPONTOS
+//let pontosAdversario = (vitoriasAdversario * 3) + parseInt(empatesAdversario); - ANTES DA FUNCTION CALCULAPONTOS
+
+let pontos = calculaPontos(vitorias, parseInt(empates), derrotas);
+let pontosAdversario = calculaPontosAdversario(vitoriasAdversario, parseInt(empatesAdversario), derrotasAdversario);
+
+if(pontos > pontosAdversario){
+    mostra("Nosso time está indo MELHOR que o Livros Velhos!");
+}
+
+if(pontos < pontosAdversario){
+    mostra("Nosso time está indo PIOR que o Livros Velhos!");
+}
+
+if(pontos == pontosAdversario){
+    mostra("Nosso time está EMPATADO com o Livros Velhos!");
+}
+
+mostra("Nosso time tem " + pontos  + " pontos!");
+
+</script>

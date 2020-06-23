@@ -1,0 +1,14 @@
+<script>
+
+let calculaDiasDeVida = function(idade){
+    let diasDeVida = idade * 365;
+    return diasDeVida;
+}
+
+let idade = prompt("Quantos anos você tem?");
+let dias = calculaDiasDeVida(idade);
+document.write("Você já viveu " + dias + " dias de vida <br>");
+let batimentos = dias * 24 * 60 * 80;
+document.write("Seu coração já bateu " + batimentos + " vezes. Haja coração!");
+
+</script>

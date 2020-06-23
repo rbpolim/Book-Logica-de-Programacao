@@ -1,0 +1,29 @@
+<script>
+
+var numeroPensado = Math.round(Math.random() * 10);
+
+var numeroTentativas = 1;
+
+while(numeroTentativas <= 3){
+    var chute = prompt('Qual você acha que é?');
+
+    if(chute === numeroPensado){
+        alert('Parabéns. Você acertou em: ' + numeroTentativas + ' tentativas.');
+        break;
+    } else {
+
+        }
+    if(chute > numeroPensado){
+        alert('Você digitou um número MAIOR do que o PC pensou.')
+    } else if (chute < numeroPensado){
+        alert('Você digitou um número MENOR do que o PC pensou.')
+        }
+    }    
+    numeroTentativas++;
+    
+}
+
+
+//alert('Você acertou em : ' + numeroTentativas + ' tentativas.');
+
+</script>

@@ -1,0 +1,19 @@
+<h3>ÁLCOOL OU GASOLINA</h3>
+
+<script>
+let tanque = 40;
+let caminhoComGasolina = 480;
+let caminhoComAlcool = 300;
+let precoGasolina = 2.90;
+let precoAlcool = 2.40;
+let consumoDeGasolina = caminhoComGasolina / tanque;
+let consumoDeAlcool = caminhoComAlcool / tanque;
+let precoPorKilometroGasolina = precoGasolina / consumoDeGasolina;
+let precoPorKilometroAlcool = precoAlcool / consumoDeAlcool;
+
+document.write("O consumo de gasolina é de: " + consumoDeGasolina + " litros por km<br>")
+document.write("O consumo de álcool é de: " + consumoDeAlcool + " litros por km<br>")
+document.write("O preço por kilometro de gasolina é de: " + precoPorKilometroGasolina.toFixed(2) + "<br>")
+document.write("O preço por kilometro de álcool é de: " + precoPorKilometroAlcool.toFixed(2) + "<br>")
+
+</script>

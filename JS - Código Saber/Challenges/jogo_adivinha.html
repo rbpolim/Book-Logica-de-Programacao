@@ -1,0 +1,38 @@
+<script>
+
+pulaLinha = function(){
+    document.write("<br>");
+}
+
+mostra = function(frase){
+    document.write(frase);
+    pulaLinha();
+}
+
+sorteia = function(){
+    let n = Math.round(Math.random() * 10)
+    return n;
+}
+
+let numeroPensado = sorteia();
+
+let chute = prompt("Já pensei. Qual você acha que é?");
+
+if(isNaN(chute)){
+    mostra("Apenas números são válidos!");
+}
+
+if(chute == numeroPensado){
+    mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+    mostra("O número que eu escolhi é igual o que você pensou.");
+} else {
+        mostra("Você errou! Eu tinha pensando no número: " + numeroPensado);
+}
+
+if(chute > numeroPensado){
+    mostra("O número que eu escolhi é menor do qual você pensou");
+} else if (chute < numeroPensado) {
+        mostra("O número que eu escolhi é maior do qual você pensou");  
+}
+
+</script>
